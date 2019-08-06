@@ -18,7 +18,10 @@ public class GeradorId {
 		LocalDateTime date = LocalDateTime.now();
 		String seq = String.format("%05d", sequencial.proximo());
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
-		return "ID107228258000199" + date.format(formatter).replace("+", "") + seq;
+
+		//caso seja o CNPJ base acrescenta zeros para completar o tamanho
+		if (cnpj.length() == 8) cnpj = cnpj + "000000";
+		return "ID1" + cnpj + date.format(formatter).replace("+", "") + seq;
 	}
 
 }
