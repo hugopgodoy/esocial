@@ -21,7 +21,7 @@ public class GeradorIdTest {
 	@Autowired
 	private GeradorId geradorId;
 	
-	private static final String CNPJ = "00509968000148";
+	private static final String CNPJ = "07228258000199";
 
 	@Test
 	public void verificarGeracaoDoId() throws ParseException {

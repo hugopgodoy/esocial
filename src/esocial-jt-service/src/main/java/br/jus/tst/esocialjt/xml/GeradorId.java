@@ -18,7 +18,7 @@ public class GeradorId {
 		LocalDateTime date = LocalDateTime.now();
 		String seq = String.format("%05d", sequencial.proximo());
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
-		return "ID1" + cnpj + date.format(formatter).replace("+", "") + seq;
+		return "ID107228258000199" + date.format(formatter).replace("+", "") + seq;
 	}
 
 }
